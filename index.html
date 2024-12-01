@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Link</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <video id="video-background" autoplay muted loop>
+        <source src="nebo.mp4" type="video/mp4">
+      </video>
+    <div>
+        <div class="naslov">
+            <div id="natasa" >Marija</div>
+            <div id="and" >&</div>
+            <div id="pavle" >Stefan</div>
+        </div>
+        <div class="ml">
+            <img src="nas link.png" alt="" style="width: 95%; margin-top: 5px;">
+        </div>
+        <div class="datum">
+            <div class="citat">"U tvojim očima pronašao sam svemir, u tvom osmijehu razlog za svaki dan, a u tvom zagrljaju dom kojem se uvijek vraćam, gdje ljubav zauvijek traje."</div>
+            <div>
+                <img src="srce2.jpg" alt="Slika u srcu" style="width: 120px;">
+            </div>
+        </div>
+        <div class="dugme">
+            <div id="dugme_prvo">
+                <button id="otvoriSliku"  style="width: 100%;height: 100%; border-radius: 10px;background-color: #F977BC; color: white; font-size: large; font-family: 'Times New Roman', Times, serif;">Prva uspomena</button>
+            </div>
+            <div class="modal" id="modall">
+                <div class="modal-poruka">
+                    <!--<h2>Naša prva slika</h2>-->
+                    <img src="prva_uspomena.JPG" style="width: 100%;" alt="Naša prva slika">
+                    <button class="zatvori" id="zatvoriSliku">Zatvori</button>
+                </div>
+            </div>
+            <div id="dugme_drugo">
+                <button id="startButton" style="width:100%;height: 100%; border-radius: 10px; background-color: #EA1889; font-size: 100%;  font-family: 'Times New Roman', Times, serif; color: white;">VOLIM TE!</button>
+            </div>
+        </div>
+        <div class="veliko_dugme">
+            <button id="galleryBtn"><div style="margin-top: 10px;">Trenuci vječne ljubavi!</div> <img src="gallery.png" alt="" style="width: 40px;"></button>
+        </div>
+        <div id="galleryModal" class="modall">
+            <div class="modal-content">
+                <div class="tur">
+                    <img src="Par1.jpg" alt="Slika1" style="width: 100%;">
+                    <img src="Par2.jpg" alt="Slika2" style="width: 100%;">
+                    <img src="Par3.jpg" alt="Slika3" style="width: 100%;">
+                    <img src="Par4.jpg" alt="Slika4" style="width: 100%;">
+                    <img src="Par5.jpg" alt="Slika5" style="width: 100%;">
+                    <img src="Par6.jpg" alt="Slika6" style="width: 100%;">
+                    <img src="Par7.jpg" alt="Slika7" style="width: 100%;">
+                    <img src="Par8.jpg" alt="Slika8" style="width: 100%;">
+                    <img src="Par9.jpg" alt="Slika9" style="width: 100%;">
+                    <img src="Par10.jpg" alt="Slika10" style="width: 100%;">
+                    <img src="Par11.jpg" alt="Slika11" style="width: 100%;">
+                    <img src="Par12.jpg" alt="Slika12" style="width: 100%;">
+                    <img src="Par13.jpg" alt="Slika13" style="width: 100%;">
+                </div>
+                <button style="width: 50%; margin-bottom: 10%; font-size: large; font-family: cursive;" class="zatvori" id="closeGallery">Zatvori</button>
+            </div>
+        </div>
+        <div class="lokacija">
+            <div id="lokacija_ikona" onclick="toggleMap()"><img src="Ikona lokacija.png" style="width: 50%; margin-left: 40px; margin-top: 2px;" alt=""></div>
+            <div id="lokacija_lokacijaa"><img src="Lokacijaaa.png" style="width: 105%;" alt=""></div>
+        </div>
+        <div class="mapa">
+           <div style="display: flex; justify-content: center;"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11710.60671978181!2d18.343401707063705!3d43.816019568805345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c9c25ecac5bd%3A0xa6e887f6b37b89c1!2sIsto%C4%8Dno%20Sarajevo!5e1!3m2!1shr!2sba!4v1732929218577!5m2!1shr!2sba"
+            width="80%" height="200px" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+        <div class="gridd">
+            <div class="video" data-video="Video6.mp4"><img src="Sl1.png" alt=""></div>
+            <div class="video" data-video="Video4.mp4"><img src="Sl2.png" alt=""></div>
+            <div class="video" data-video="Video5.mp4"><img src="Sl3.png" alt=""></div>
+            <div class="video" data-video="Video2.mp4"><img src="Sl4.png" alt=""></div>
+            <div class="video" data-video="Video1.mp4"><img src="Sl5.png" alt=""></div>
+            <div class="video" data-video="Video3.mp4"><img src="Sl6.png" alt=""></div>
+        </div>
+        <div id="videoModal">
+            <button id="closeBtn">Zatvori</button>
+            <video id="videoPlayer" controls></video>
+        </div>
+        <div class="kraj" >
+            <div class="pismo"><img src="pismo.png" alt="Pismo" id="otvoriModal"></div>
+            <div class="pjesma"><img src="pjesma.png" alt="YouTube pjesma" id="yt_pjesma"></div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-poruka">
+              <h4>SREĆAN ROĐENDAN LJUBAVI!</h4>
+              <p style="font-size: 14px;">Ovaj divn dan ću iskoristiti da ti se zahvalim na svemu. <br>
+            Hvala ti što si uvijek moja najveća podrška i oslonac,
+             što uvijek vjeruješ u mene i što me guraš naprijed ka ostvarenju ciljeva.
+             Hvala ti što u svakom momentu razumiješ moja ludila i trpiš me takvu kakva jesam.
+            Beskrajno sam srećna i zahvalna što te imam pored sebe i što mi pružaš ljubav na način na koji samo ti znaš.
+            Ostani uvijek takav kakav jesi, NAJBOLJI. Želim ti da nastaviš da ostvaruješ svoje snove i da nizaš
+            samo uspjehe, jer ti i ne znaš drugačije. Oduševljavaš me svojom strašću i posvećenosti za ono što voliš.
+            Ti si moja inspircija i osoba zbog koje se trudim da svaki dan budem bolja.
+            Ti si više od partnera - ti si moj najbolji drug, moj saputnik, moja najveća ljubav...
+            Razmišljam koje riječi da iskoristim da ti opišem ljubav koju osjećam prema tebi i tu shvatim da je 
+            Vuk Karadžić dosta omanuo pisajući riječnik srpskog jezika, jer nije napisao riječi dovoljno jake da 
+            opišu moju ljubav prema tebi. Zbog toga ću se koristiti tim što imam, šta da radim.
+            Ljubavi moja volim te najbeskrajnije na cijelom svijetu, što bi mi rekli ono naše SKROZ!!!
+            Zelim da ti ovaj tvoj 22. rođendan bude bar u pola poseban i lijep kao što je meni. <br>
+            Ljubim te i volim!
+        </p>
+              <button class="zatvori" id="zatvoriModal">Zatvori</button>
+            </div>
+          </div>
+    </div>
+    <canvas id="heartCanvas"></canvas>
+    <script src="inex.js"></script>
+</body>
+</html>
